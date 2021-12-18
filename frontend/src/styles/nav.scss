@@ -1,0 +1,56 @@
+.topBanner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 10vw;
+    margin-right: 10vw;
+
+    h1 {
+        padding-top: 2px;
+        font-weight: 500;
+        font-size: 30px;
+    }
+
+    img {
+        width: 357px;
+        height: 56px;
+    }
+
+    a { 
+        text-decoration: none;
+        color: black;
+    }
+}
+
+nav {
+    background-color: blue;
+    box-shadow: 0 5px 7px -3px #969191;
+    text-align: right;
+    padding-top: 11px;
+    padding-bottom: 11px;
+    line-height: 12px;
+
+    .links { 
+        margin-right: 10%;
+    }
+    
+    span {
+        color: #fff;
+        margin-right: 20px;
+        font-size: 22px;
+    }
+
+    a {
+        font-size: 16px;
+        text-decoration: none;
+        font-weight: 600;
+        color: #fff;
+        text-transform: uppercase;
+        text-shadow: #000 1px 1px 0;
+        margin-right: 20px;
+
+        &:hover {
+            color: rgba(255, 255, 255, 0.5);
+        }
+    }
+}

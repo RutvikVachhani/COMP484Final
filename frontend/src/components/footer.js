@@ -1,16 +1,14 @@
 import React from 'react';
-import '../styles/footer.css';
+import styles from '../styles/footer.scss';
+import { Link } from "react-router-dom";
 
-const Footer = () => {
-    <div>
-        <footer className='footer is-primary'>
-            <div className='container'>
-                <div className='colums'>
-                    <div className='column'>
-                        <p>This os footer</p>
-                    </div>
-                </div>
-            </div>
-        </footer>
-    </div>
+export default function Footer() {
+    return(
+        <div>
+            <footer className={styles}>
+                <Link to="/AboutUs">About Us</Link>
+                <Link to="/ContactUs">Contact Us</Link>
+            </footer>
+        </div>
+    )
 }
