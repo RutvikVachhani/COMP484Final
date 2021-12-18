@@ -26,8 +26,8 @@ const BMIInsert = () => {
 
     const InsertBMI = function(event){
         event.preventDefault()
-        const { height, weight } = info
-        if(height && weight){
+        const { age, height, weight } = info
+        if(age && height && weight){
             axios.post("http://localhost:4000/bmiInput", info)
             .then( res => {
                 alert(res.data.message)
@@ -43,6 +43,8 @@ const BMIInsert = () => {
                 Welcome 
             </h1>
             <form name="bmi" onSubmit={InsertBMI}>
+                <label>Age</label>
+                <input type="text" name="age" id="age" value={info.age} onChange={handleChange} placeholder="Enter Age" /> Years
                 <label>Weight</label>
                 <input type="text" name="weight" id="weight" value={info.weight} onChange={handleChange} placeholder="Enter Weight in lbs" /> lbs
                 <br />
