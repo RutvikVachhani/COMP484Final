@@ -29,8 +29,8 @@ function App() {
           <Route path="/bmiInsert">
             <BMIInsert />
           </Route>
-          <Route path="/displayBMI">
-            <DisplayBMI />
+          <Route path="/homepage">
+            <Homepage />
           </Route>
         </Switch>
       </Router>

@@ -1,5 +1,6 @@
 import React,{useState} from "react";
 import "../styles/homepage.css";
+import styles from "../styles/bmiInsert.scss";
 import axios from "axios"
 import { useHistory } from "react-router-dom"
 
@@ -42,6 +43,7 @@ const BMIInsert = () => {
             <h1>
                 Welcome 
             </h1>
+            <div className={styles}>
             <form name="bmi" onSubmit={InsertBMI}>
                 <label>Age</label>
                 <input type="text" name="age" id="age" value={info.age} onChange={handleChange} placeholder="Enter Age" /> Years
@@ -53,6 +55,7 @@ const BMIInsert = () => {
                 <br />
                 <button className="button" type="submit">Submit</button>
             </form>
+            </div>
             <Footer />
         </div>
     )
