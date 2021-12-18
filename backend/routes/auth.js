@@ -2,12 +2,15 @@ const express = require('express');
 const router = express.Router();
 const User = require('../models/User');
 
+var globalUsername = "";
+
 router.post('/auth', (req, res) => {
-    const { username, password} = req.body
-    User.findOne({ username: username}, (err, user) => {
+    const { username, password } = req.body;
+    User.findOne({username: username}, (err, user) => {
         if(user){
             if(password === user.password ) {
                 res.send({message: "Login Successfull", user: user})
+                globalUsername = user.username;
             } else {
                 res.send({ message: "Password didn't match"})
             }
@@ -41,5 +44,38 @@ router.post('/registerInput', function(req, res, next) {
     }
 });
 
+const InfoBMI = require('../models/infoBMI');
+
+router.post('/bmiInput', (req, res, next) => {
+    var height = req.body.height;
+    var weight = req.body.weight;
+	var bmiC = ((703*weight)/(height*height)).toFixed(2);
+    let Info = new InfoBMI ({
+        username: globalUsername,
+        height: height,
+        weight: weight,
+        bmi: bmiC
+    })
+    Info.save()
+    .then(
+        res.json({
+            message: 'info added'
+        })
+    )
+    .catch(err => {
+        res.json ({
+            message: 'Error'
+        })
+    })
+})
+
+router.post('/display', (req, res, next) => {
+    var result = User.findOne({username: req.body.Username}).sort({createdAt:-1}).limit(1)
+    if(result){
+        res.send({
+            message: "info here", info: result
+        })
+    }
+});
 
 module.exports = router;

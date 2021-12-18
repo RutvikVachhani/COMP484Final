@@ -23,7 +23,7 @@ const Login = ({ setLoginUser }) => {
     const login = () => {
         axios.post("http://localhost:4000/auth", user)
         .then(res => {
-            alert(res.data.user)
+            alert(res.data.message)
             setLoginUser(res.data.user)
             history.push("/", user)
         })

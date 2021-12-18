@@ -26,7 +26,6 @@ app.use(express.json());
 app.use(cors());
 //---------------------------------//
 app.use('/', AuthRoutes);
-app.use('/', HomeRoutes);
 
 //node server output
 app.listen(4000, () => console.log("Server on port: 4000"));
