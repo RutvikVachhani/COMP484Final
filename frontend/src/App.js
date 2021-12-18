@@ -3,15 +3,14 @@ import Homepage from "./components/homepage"
 import Login from "./components/login"
 import Register from "./components/register"
 import BMIInsert from './components/bmiInsert'
-import AboutUs from "./components/AboutUs";
-//import ContactUs from "./components/ContactUs";
+import DisplayBMI from './components/displayBMI'
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { useState } from 'react';
 
 function App() {
 
   const [ user, setLoginUser] = useState({})
-  
+
   return (
     <div>
       <Router>

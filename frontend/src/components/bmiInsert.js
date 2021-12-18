@@ -32,7 +32,7 @@ const BMIInsert = () => {
             axios.post("http://localhost:4000/bmiInput", info)
             .then( res => {
                 alert(res.data.message)
-                //history.push("/")
+                history.push("/displayBMI")
             })
         }   
     }

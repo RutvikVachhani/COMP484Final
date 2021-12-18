@@ -2,6 +2,7 @@ import React,{useState} from "react";
 import "../styles/homepage.css";
 import axios from "axios"
 import { useHistory } from "react-router-dom"
+
 import Login from "./login";
 
 import Nav from "./Nav";
@@ -15,7 +16,7 @@ const Homepage = ({setLoginUser}) => {
         <div className="homepage">
             <Nav />
             <h1>
-                Welcome, 
+                Welcome
             </h1>
             <h2>Click below to input your Info and calculate you BMI</h2>
             <button className="button" onClick={ () => history.push('/bmiInsert')}>Click Me</button>
