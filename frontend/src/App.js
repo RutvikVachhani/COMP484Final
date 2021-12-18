@@ -3,6 +3,8 @@ import Homepage from "./components/homepage"
 import Login from "./components/login"
 import Register from "./components/register"
 import BMIInsert from './components/bmiInsert'
+import AboutUs from "./components/AboutUs";
+//import ContactUs from "./components/ContactUs";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { useState } from 'react';
 
@@ -27,6 +29,9 @@ function App() {
           </Route>
           <Route path="/bmiInsert">
             <BMIInsert />
+          </Route>
+          <Route path="/homepage">
+            <Homepage />
           </Route>
         </Switch>
       </Router>

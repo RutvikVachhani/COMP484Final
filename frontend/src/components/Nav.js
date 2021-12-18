@@ -1,16 +1,15 @@
 import React from "react";
 import styles from "../styles/nav.scss";
+import { Link } from "react-router-dom";
 
 export default function Nav() {
   return (
-    <nav className={styles}>
-      <div className={styles.links}>
-          <h1>Get Healthier</h1>
-        <a class="active" href="homepage">
-          Home
-        </a>
-      </div>
-    </nav>
-  )
+    <div className={styles.topBanner}>
+      <nav className={styles}>
+        <div className={styles.links}>
+          <Link to="/homepage">Home</Link>
+        </div>
+      </nav>
+    </div>
+  );
 }
-
