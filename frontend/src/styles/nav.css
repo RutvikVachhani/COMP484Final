@@ -4,7 +4,7 @@
     align-items: center;
     margin-left: 10vw;
     margin-right: 10vw;
-
+}
     h1 {
         color: whitesmoke;
         padding-top: 2px;
@@ -21,7 +21,7 @@
         text-decoration: none;
         color: black;
     }
-}
+
 
 nav {
     background-color: blue;
@@ -30,7 +30,7 @@ nav {
     padding-top: 11px;
     padding-bottom: 11px;
     line-height: 12px;
-
+}
     .links { 
         margin-right: 10%;
     }
@@ -49,9 +49,8 @@ nav {
         text-transform: uppercase;
         text-shadow: #000 1px 1px 0;
         margin-right: 20px;
-
-        &:hover {
+    }
+        a:hover {
             color: rgba(255, 255, 255, 0.5);
         }
-    }
-}
+    

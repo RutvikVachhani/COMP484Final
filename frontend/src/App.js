@@ -1,11 +1,13 @@
 import './App.css'
+import React from 'react';
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { useState } from 'react';
 import Homepage from "./components/homepage"
 import Login from "./components/login"
 import Register from "./components/register"
 import BMIInsert from './components/bmiInsert'
 import DisplayBMI from './components/displayBMI'
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import { useState } from 'react';
+
 
 function App() {
 
@@ -31,6 +33,9 @@ function App() {
           </Route>
           <Route path="/homepage">
             <Homepage />
+          </Route>
+          <Route path="/displayBMI">
+            <DisplayBMI />
           </Route>
         </Switch>
       </Router>

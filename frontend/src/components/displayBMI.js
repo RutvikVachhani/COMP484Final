@@ -1,5 +1,5 @@
 import React,{useState} from "react";
-
+import BMIInsert from "./bmiInsert";
 import axios from "axios"
 import { useHistory } from "react-router-dom"
 
@@ -14,7 +14,7 @@ const DisplayBMI = () => {
             //history.push("/bmiInsert")
         })
     }
-
+    var bmi = BMIInsert.BMI;
     return(
         <div>
             <p>your weight</p>

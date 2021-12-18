@@ -6,7 +6,7 @@ import { useHistory } from "react-router-dom"
 import Login from "./login";
 
 import Nav from "./Nav";
-import Footer from "./Footer";
+import Footer from "./footer";
 
 const Homepage = ({setLoginUser}) => {
 
