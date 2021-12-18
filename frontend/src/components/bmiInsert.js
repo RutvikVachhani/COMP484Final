@@ -3,6 +3,9 @@ import "../styles/homepage.css";
 import axios from "axios"
 import { useHistory } from "react-router-dom"
 
+import Nav from "./Nav";
+import Footer from "./Footer";
+
 const BMIInsert = () => {
 
     const history = useHistory()
@@ -35,14 +38,7 @@ const BMIInsert = () => {
      
     return (
         <div className="homepage">
-            <nav>
-                 <div class="inline">
-                    <h1>Get Healthier</h1>
-                    <div class="Right">
-                        <a class="active" href="homepage">Home</a>
-                    </div>
-                </div>
-            </nav>
+            <Nav />
             <h1>
                 Welcome 
             </h1>
@@ -55,6 +51,7 @@ const BMIInsert = () => {
                 <br />
                 <button className="button" type="submit">Submit</button>
             </form>
+            <Footer />
         </div>
     )
 }
