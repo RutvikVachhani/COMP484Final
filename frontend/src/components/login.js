@@ -7,7 +7,7 @@ const Login = ({ setLoginUser }) => {
 
     const history = useHistory()
 
-    const [ user, setUser] = useState({
+    const [ user, setUser ] = useState({
         username:"",
         password:""
     })
@@ -23,9 +23,9 @@ const Login = ({ setLoginUser }) => {
     const login = () => {
         axios.post("http://localhost:4000/auth", user)
         .then(res => {
-            alert(res.data.message)
+            alert(res.data.user)
             setLoginUser(res.data.user)
-            history.push("/")
+            history.push("/", user)
         })
     }
 
