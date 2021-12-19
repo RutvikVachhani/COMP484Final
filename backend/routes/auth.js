@@ -78,7 +78,7 @@ router.post('/bmiInput', (req, res, next) => {
 })
 
 router.get('/display', (req, res, next) => {
-    InfoBMI.findOne({username: "q"}, function(err, result) {
+    InfoBMI.findOne({username: globalUsername}, function(err, result) {
         if(err){
             res.json ({
                 message: err

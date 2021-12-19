@@ -52,11 +52,17 @@ const BMIInsert = () => {
             <Nav />
             <h1>
                 Welcome 
+                Please input your information
             </h1>
             <div>
             <form name="bmi" onSubmit={InsertBMI}>
                 <label>Gender</label>
-                <input type="text" name="gender" id="gender" value={info.gender} onChange={handleChange} placeholder="Enter gender" />
+                <select name="gender" id="gender" value={info.gender} onChange={handleChange} >
+                    <option value="" disabled>Select Gender</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                </select>
+                {/*<input type="text" name="gender" id="gender" value={info.gender} onChange={handleChange} placeholder="Enter gender" />*/}
                 <br />
                 <label>Age</label>
                 <input type="number" name="age" id="age" value={info.age} onChange={handleChange} placeholder="Enter Age" /> years
@@ -68,10 +74,26 @@ const BMIInsert = () => {
                 <input type="number" name="height" id="height" value={info.height} onChange={handleChange} placeholder="Enter height in inches" /> inches
                 <br />
                 <label>Activity</label>
-                <input type="text" name="activity" id="activity" value={info.activity} onChange={handleChange} placeholder="Enter Activity" /> [sedentary, light, moderate, active, extreme].
+                {/*<input type="text" name="activity" id="activity" value={info.activity} onChange={handleChange} placeholder="Enter Activity" /> */}
+                <select name="activity" id="activity" value={info.activity} onChange={handleChange} >
+                    <option value="" disabled>Select Activity Level</option>
+                    <option value="sedentary">Sedentary</option>
+                    <option value="light">Light</option>
+                    <option value="moderate">Moderate</option>
+                    <option value="active">Active</option>
+                    <option value="extreme">Extreme</option>
+                </select>
                 <br />
                 <label>Goal</label>
-                <input type="text" name="goal" id="goal" value={info.goal} onChange={handleChange} placeholder="Enter Goal" /> [balance, mildWeightLoss, mildWeightGain, heavyWeightLoss, heavyWeightGain]
+                {/*<input type="text" name="goal" id="goal" value={info.goal} onChange={handleChange} placeholder="Enter Goal" />*/}
+                <select name="goal" id="goal" value={info.goal} onChange={handleChange}>
+                    <option value="" disabled>Select Goal</option>
+                    <option value="balance">Balance</option>
+                    <option value="mildWeightLoss">Mild Weight Loss</option>
+                    <option value="mildWeightGain">Mild Weight Gain</option>
+                    <option value="heavyWeightLoss">Heavy Weight Loss</option>
+                    <option value="heavyWeightGain">Heavy Weight Gain</option>
+                </select>
                 <br />
                 <button className="button" type="submit">Submit</button>
             </form>

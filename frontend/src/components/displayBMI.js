@@ -17,15 +17,16 @@ const DisplayBMI = () => {
         fetchInfo()
     }, [])
 
-    var height = info.height/0.393
-    var weight = info.weight/2.2
-    var BMI = fitnessCalculatorFunctions.BMI(height, weight);
+    var height = (info.height/0.393).toFixed(2);
+    var weight = (info.weight/2.2).toFixed(2);
+    var BMI = fitnessCalculatorFunctions.BMI(height, weight).toFixed(2);
 
     const history = useHistory();
     
     return(
         <div>
             <h1>Your Age</h1>
+            <h2>{info.username}</h2>
             <h2>{info.age}</h2>
             <h2>{info.height}</h2>
             <h2>{info.weight}</h2>
