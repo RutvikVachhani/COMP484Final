@@ -1,7 +1,5 @@
 import React,{useState, useEffect} from "react";
-import axios from "axios"
 import { useHistory } from "react-router-dom"
-import { Component } from "react";
 import { getInfo } from "../api";
 const fitnessCalculatorFunctions = require("fitness-calculator");
 
@@ -25,12 +23,11 @@ const DisplayBMI = () => {
     
     return(
         <div>
-            <h1>Your Age</h1>
-            <h2>{info.username}</h2>
-            <h2>{info.age}</h2>
-            <h2>{info.height}</h2>
-            <h2>{info.weight}</h2>
-            <h2>{BMI}</h2>
+            <u><h1>BMI: {BMI} </h1></u>
+            <h2>Age: {info.age}</h2>
+            <h2>Height: {info.height}</h2>
+            <h2>Weight: {info.weight}</h2>
+
 
         </div>
     )
