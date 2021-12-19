@@ -1,6 +1,8 @@
 import React,{useState, useEffect} from "react";
 import { useHistory } from "react-router-dom"
 import { getInfo } from "../api";
+import Nav from "./Nav";
+import Footer from "./footer";
 const fitnessCalculatorFunctions = require("fitness-calculator");
 
 const DisplayBMI = () => {
@@ -23,11 +25,12 @@ const DisplayBMI = () => {
     
     return(
         <div>
+            <Nav/>
             <u><h1>BMI: {BMI} </h1></u>
             <h2>Age: {info.age}</h2>
             <h2>Height: {info.height}</h2>
             <h2>Weight: {info.weight}</h2>
-
+            <Footer/>
 
         </div>
     )
