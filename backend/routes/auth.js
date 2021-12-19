@@ -84,7 +84,7 @@ router.get('/display', (req, res, next) => {
                 message: err
             })
         } else {
-            res.send(result)
+            res.json(result)
         }
     })
 });
