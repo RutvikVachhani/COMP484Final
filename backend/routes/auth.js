@@ -47,13 +47,21 @@ router.post('/registerInput', function(req, res, next) {
 const InfoBMI = require('../models/infoBMI');
 
 router.post('/bmiInput', (req, res, next) => {
+    var gender = req.body.gender;
+    var age = req.body.age;
     var height = req.body.height;
     var weight = req.body.weight;
+    var activity = req.body.activity;
+    var goal = req.body.goal;
 	var bmiC = ((703*weight)/(height*height)).toFixed(2);
     let Info = new InfoBMI ({
         username: globalUsername,
+        gender: gender,
+        age: age,
         height: height,
         weight: weight,
+        activity: activity,
+        goal: goal,
         bmi: bmiC
     })
     Info.save()

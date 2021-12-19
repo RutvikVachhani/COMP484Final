@@ -6,11 +6,23 @@ const bmiSchema = new Schema ({
     username:{
         type: String
     },
+    gender:{
+        type: String
+    },
+    age : {
+        type: Number
+    },
     height: {
         type: Number
     },
     weight: {
         type: Number
+    },
+    activity:{
+        type: String
+    },
+    goal:{
+        type: String
     },
     bmi: {
         type: mongoose.Decimal128
