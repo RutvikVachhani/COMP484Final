@@ -7,6 +7,10 @@ import Login from "./components/login"
 import Register from "./components/register"
 import BMIInsert from './components/bmiInsert'
 import DisplayBMI from './components/displayBMI'
+import BodyWeight from './components/bodyWeight'
+import CalorieNeeds from './components/calorieNeeds'
+import TDEE from './components/TDEE'
+import DietPlans from './components/dietPlans'
 
 
 function App() {
@@ -36,6 +40,19 @@ function App() {
           </Route>
           <Route path="/displayBMI">
             <DisplayBMI />
+          </Route>
+
+          <Route path="/bodyWeight">
+            <BodyWeight />
+          </Route>
+          <Route path="/calorieNeeds">
+            <CalorieNeeds />
+          </Route>
+          <Route path="/TDEE">
+            <TDEE />
+          </Route>
+          <Route path="/dietPlans">
+            <DietPlans />
           </Route>
         </Switch>
       </Router>
