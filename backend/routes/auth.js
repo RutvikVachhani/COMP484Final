@@ -77,13 +77,16 @@ router.post('/bmiInput', (req, res, next) => {
     })
 })
 
-router.post('/display', (req, res, next) => {
-    var result = User.findOne({username: req.body.Username}).sort({createdAt:-1}).limit(1)
-    if(result){
-        res.send({
-            message: "info here", info: result
-        })
-    }
+router.get('/display', (req, res, next) => {
+    InfoBMI.findOne({username: "q"}, function(err, result) {
+        if(err){
+            res.json ({
+                message: err
+            })
+        } else {
+            res.send(result)
+        }
+    })
 });
 
 module.exports = router;
