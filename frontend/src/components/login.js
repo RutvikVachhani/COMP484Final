@@ -1,12 +1,14 @@
-import React, {useState} from "react"
+import React, {useState, useEffect} from "react"
 import "../styles/login.css"
 import axios from "axios"
 import { useHistory } from "react-router-dom"
+import { getInfo } from "../api"
 
 const Login = ({ setLoginUser }) => {
 
     const history = useHistory()
 
+    //authenticating the user
     const [ user, setUser ] = useState({
         username:"",
         password:""
@@ -20,12 +22,27 @@ const Login = ({ setLoginUser }) => {
         })
     }
 
+    //if user personal details exits
+    const [ info, setInfo ] = useState([])
+
+    useEffect(() => {
+        const fetchInfo = async () => {
+            const i = await getInfo()
+            setInfo(i)
+        }
+        fetchInfo()
+    }, [])
+
     const login = () => {
         axios.post("http://localhost:4000/auth", user)
         .then(res => {
             alert(res.data.message)
             setLoginUser(res.data.user)
-            history.push("/", user)
+            if(info.username == user.username){
+                history.push("/", user)
+            } else {
+                history.push("/bmiInsert")
+            }
         })
     }
 

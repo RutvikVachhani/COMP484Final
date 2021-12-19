@@ -1,39 +1,37 @@
-import React,{useState} from "react";
-import axios from "axios"
+import React,{useState, useEffect} from "react";
 import { useHistory } from "react-router-dom"
-import { Component } from "react";
+import { getInfo } from "../api";
+import Nav from "./Nav";
+import Footer from "./footer";
+const fitnessCalculatorFunctions = require("fitness-calculator");
 
 const DisplayBMI = () => {
 
-    const [ info, setInfo ] = useState({
-        i: []
-    })
+    const [ info, setInfo ] = useState([])
+
+    useEffect(() => {
+        const fetchInfo = async () => {
+            const i = await getInfo()
+            setInfo(i)
+        }
+        fetchInfo()
+    }, [])
+
+    var height = (info.height/0.393).toFixed(2);
+    var weight = (info.weight/2.2).toFixed(2);
+    var BMI = fitnessCalculatorFunctions.BMI(height, weight).toFixed(2);
 
     const history = useHistory();
-
-    const display = function(event) {
-        event.preventDefault();
-        axios.get("http://localhost:4000/display")
-        .then((response) => {
-            const data = response.data;
-            console.log("data received");
-            alert("info here");
-        })
-        .catch(() => {
-            alert("error")
-        })
-    }
     
     return(
         <div>
-            <p>your weight</p>
-            <p>your height</p>
-            <p>your bmi</p>
-            <form name="display" onSubmit={display}>
-                <button className="button" type="submit">Submit</button>
-            </form>
-            <div className="display">
-            </div>
+            <Nav/>
+            <u><h1>BMI: {BMI} </h1></u>
+            <h2>Age: {info.age}</h2>
+            <h2>Height: {info.height}</h2>
+            <h2>Weight: {info.weight}</h2>
+            <Footer/>
+
         </div>
     )
 }
