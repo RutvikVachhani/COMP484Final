@@ -1,3 +1,4 @@
+//importing all node modules
 import React, { useState, useEffect } from "react";
 import { useHistory } from "react-router-dom";
 import { getInfo } from "../api";
@@ -7,9 +8,12 @@ import Nav from "./nav";
 import Footer from "./footer";
 const fitnessCalculatorFunctions = require("fitness-calculator");
 
+//functions returns html
 const BodyWeight = () => {
+  //useState to store info
   const [info, setInfo] = useState([]);
 
+  //useEffect to fetching data from the backend
   useEffect(() => {
     const fetchInfo = async () => {
       const i = await getInfo();
@@ -18,6 +22,7 @@ const BodyWeight = () => {
     fetchInfo();
   }, []);
 
+  //using the fitness-calculator api
   var height = info.height / 0.393;
   var gender = info.gender;
   var Idealweight = (
@@ -26,6 +31,7 @@ const BodyWeight = () => {
 
   const history = useHistory();
 
+  //if conditions for different categories of bmi
   if (Idealweight > info.weight) {
     document.getElementById("compare").innerHTML =
       "You need to gain around " +

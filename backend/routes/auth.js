@@ -1,3 +1,4 @@
+// API's created in the backend and used from the front end
 const express = require('express');
 const router = express.Router();
 const User = require('../models/User');
@@ -46,6 +47,7 @@ router.post('/registerInput', function(req, res, next) {
 
 const InfoBMI = require('../models/infoBMI');
 
+//api for inputing Personal info inot mongodb
 router.post('/bmiInput', (req, res, next) => {
     var gender = req.body.gender;
     var age = req.body.age;
@@ -77,6 +79,7 @@ router.post('/bmiInput', (req, res, next) => {
     })
 })
 
+//fetching informating from the database
 router.get('/display', (req, res, next) => {
     InfoBMI.findOne({username: globalUsername}, function(err, result) {
         if(err){
@@ -89,4 +92,5 @@ router.get('/display', (req, res, next) => {
     })
 });
 
+//exporting all the routes
 module.exports = router;

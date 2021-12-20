@@ -1,3 +1,4 @@
+//importing all node modules and exported modules from other files
 import React from "react";
 import "../styles/global.css";
 import axios from "axios";
@@ -6,6 +7,7 @@ import { useHistory } from "react-router-dom";
 import Nav from "./nav";
 import Footer from "./footer";
 
+//functions returns html to the browser
 function AboutUs() {
   return (
     <div>
@@ -57,4 +59,5 @@ function AboutUs() {
   );
 }
 
+//exporting the module to the app.js
 export default AboutUs;

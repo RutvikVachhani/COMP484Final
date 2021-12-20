@@ -1,3 +1,4 @@
+//importing all node modules and exported modules from other files
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "../styles/global.css";
@@ -9,9 +10,11 @@ import Footer from "./footer";
 
 const fitnessCalculatorFunctions = require("fitness-calculator");
 
+  //functions returns html to the browser
 const BMIInsert = () => {
   const history = useHistory();
 
+//useState from react to save info
   const [info, setInfo] = useState({
     gender: String,
     age: Number,
@@ -20,7 +23,7 @@ const BMIInsert = () => {
     activity: String,
     goal: String,
   });
-
+//function which handles user input
   const handleChange = (e) => {
     const { name, value } = e.target;
     setInfo({

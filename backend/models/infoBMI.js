@@ -1,3 +1,4 @@
+//Schema for collection BMI for mongoDB
 const { Double } = require('bson');
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
@@ -31,4 +32,5 @@ const bmiSchema = new Schema ({
 
 const InfoBMI = mongoose.model('InfoBMI', bmiSchema);
 
+//exporting the module
 module.exports = InfoBMI;

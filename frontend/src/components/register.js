@@ -4,10 +4,11 @@ import axios from "axios";
 import { useHistory } from "react-router-dom";
 import logo from "../assets/healthy-people-logo-vector-19182580.jpg";
 
-
+//function returning an html
 const Register = () => {
   const history = useHistory();
 
+  //saving using input from the form on html
   const [user, setUser] = useState({
     name: "",
     username: "",
@@ -15,6 +16,7 @@ const Register = () => {
     email: "",
   });
 
+  //handling changes from the user input
   const handleChange = (e) => {
     const { name, value } = e.target;
     setUser({
@@ -23,6 +25,7 @@ const Register = () => {
     });
   };
 
+  //api for connecting to backend and inputing the info to mongodb
   const register = () => {
     const { name, username, password, reEnterPassword, email } = user;
     if (name && username && password === reEnterPassword && email) {

@@ -1,3 +1,4 @@
+//importing all node modules
 import React, { useState, useEffect } from "react";
 import { useHistory } from "react-router-dom";
 import { getInfo } from "../api";
@@ -7,6 +8,7 @@ import Footer from "./footer";
 
 const fitnessCalculatorFunctions = require("fitness-calculator");
 
+//functions returns html
 const DietPlan = () => {
   const [info, setInfo] = useState([]);
 

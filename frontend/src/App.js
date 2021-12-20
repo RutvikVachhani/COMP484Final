@@ -13,6 +13,7 @@ import TDEE from './components/TDEE'
 import DietPlans from './components/dietPlans'
 import AboutUs from './components/AboutUs';
 
+//has rotues and switch importing from react which links to different files and returns that files html and functions
 function App() {
 
   const [ user, setLoginUser] = useState({})

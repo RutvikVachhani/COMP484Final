@@ -22,6 +22,7 @@ const Homepage = ({ setLoginUser }) => {
     document.getElementById("mySidenav").style.width = "0";
   }
 
+  //has all the links and routes which on click goes to different pages
   return (
     <div>
       <Nav />

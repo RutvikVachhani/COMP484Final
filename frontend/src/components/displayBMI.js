@@ -8,8 +8,10 @@ import Nav from "./nav";
 import Footer from "./footer";
 const fitnessCalculatorFunctions = require("fitness-calculator");
 
+//functions returns html
 const DisplayBMI = () => {
   const [info, setInfo] = useState([]);
+  //useEffect to fetching data from the backend
 
   useEffect(() => {
     const fetchInfo = async () => {
