@@ -33,6 +33,7 @@ const Login = ({ setLoginUser }) => {
     fetchInfo();
   }, []);
 
+  //connecting to the backend and checking for the info and verifying
   const login = () => {
     axios.post("http://localhost:4000/auth", user).then((res) => {
       setLoginUser(res.data.user);

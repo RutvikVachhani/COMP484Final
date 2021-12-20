@@ -1,3 +1,4 @@
+//importing node modules
 import React, { useState, useEffect } from "react";
 import { useHistory } from "react-router-dom";
 import { getInfo } from "../api";
@@ -8,9 +9,11 @@ import Nav from "./nav";
 import Footer from "./footer";
 const fitnessCalculatorFunctions = require("fitness-calculator");
 
+//function on returning html
 const TDEE = () => {
   const [info, setInfo] = useState([]);
 
+  //useeffect to fetch data from mongodb
   useEffect(() => {
     const fetchInfo = async () => {
       const i = await getInfo();
@@ -33,7 +36,7 @@ const TDEE = () => {
   );
 
   const history = useHistory();
-
+  
   return (
     <div>
       <Nav />

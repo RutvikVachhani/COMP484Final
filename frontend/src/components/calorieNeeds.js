@@ -1,3 +1,5 @@
+//importing all node modules
+
 import React, { useState, useEffect } from "react";
 import { useHistory } from "react-router-dom";
 import { getInfo } from "../api";
@@ -8,8 +10,12 @@ import Nav from "./nav";
 import Footer from "./footer";
 const fitnessCalculatorFunctions = require("fitness-calculator");
 
+//functions returns html
 const CalorieNeeds = () => {
+    //useState to store info
   const [info, setInfo] = useState([]);
+
+  //useEffect to fetching data from the backend
 
   useEffect(() => {
     const fetchInfo = async () => {
@@ -19,6 +25,7 @@ const CalorieNeeds = () => {
     fetchInfo();
   }, []);
 
+  //using the fitness-calculator api
   var gender = info.gender;
   var age = info.age;
   var height = info.height / 0.393;
