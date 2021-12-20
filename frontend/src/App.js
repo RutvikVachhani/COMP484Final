@@ -11,7 +11,7 @@ import BodyWeight from './components/bodyWeight'
 import CalorieNeeds from './components/calorieNeeds'
 import TDEE from './components/TDEE'
 import DietPlans from './components/dietPlans'
-
+import AboutUs from './components/AboutUs';
 
 function App() {
 
@@ -41,7 +41,6 @@ function App() {
           <Route path="/displayBMI">
             <DisplayBMI />
           </Route>
-
           <Route path="/bodyWeight">
             <BodyWeight />
           </Route>
@@ -53,6 +52,9 @@ function App() {
           </Route>
           <Route path="/dietPlans">
             <DietPlans />
+          </Route>
+          <Route path="/AboutUs">
+            <AboutUs />
           </Route>
         </Switch>
       </Router>

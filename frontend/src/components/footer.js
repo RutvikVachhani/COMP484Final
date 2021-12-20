@@ -6,7 +6,7 @@ export default function Footer() {
   return (
     <div>
       <footer>
-      <h2>Get Healthier Today</h2>
+        <h2>Get Healthier Today</h2>
       </footer>
     </div>
   );

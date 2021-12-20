@@ -26,11 +26,14 @@ const Homepage = ({ setLoginUser }) => {
     <div>
       <Nav />
       <div className="center">
-        <h1></h1>
         <br />
-        <h2>Welcome, check side bar for information</h2>
+        <h2>Welcome to a healther life style:</h2>
+        <p>check side bar for information towards achieving a healty future.</p>
       </div>
       <div id="mySidenav" className="sidenav">
+        <Link to="/homepage">Home</Link>  
+        <p>Enter information below to get started</p>
+        <br />
         <Link to="/bmiInsert">Insert BMI info</Link>
         <br />
         <h3>Display your BMI</h3>

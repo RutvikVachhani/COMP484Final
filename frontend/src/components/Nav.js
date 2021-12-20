@@ -7,8 +7,13 @@ export default function Nav() {
     <>
       <div>
         <nav>
+          <div className="left">
+            <h2>Get Healthier Today</h2>
+          </div>
           <div>
-            <Link to="/homepage">Home</Link>
+            <h2>
+              <Link to="/login">Logout</Link>
+            </h2>
           </div>
         </nav>
       </div>
