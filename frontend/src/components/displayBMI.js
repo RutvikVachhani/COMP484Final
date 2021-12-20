@@ -1,7 +1,8 @@
 import React,{useState, useEffect} from "react";
 import { useHistory } from "react-router-dom"
 import { getInfo } from "../api";
-import Nav from "./Nav";
+import "../styles/global.css";
+import Nav from "./nav";
 import Footer from "./footer";
 const fitnessCalculatorFunctions = require("fitness-calculator");
 

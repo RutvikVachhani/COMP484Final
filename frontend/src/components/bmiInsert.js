@@ -1,10 +1,9 @@
 import React,{useState} from "react";
 import { Link } from "react-router-dom";
-import "../styles/homepage.css";
-import "../styles/bmiInsert.css";
+import "../styles/global.css";
 import axios from "axios"
 import { useHistory } from "react-router-dom"
-import Nav from "./Nav";
+import Nav from "./nav";
 import Footer from "./footer";
 
 const fitnessCalculatorFunctions = require("fitness-calculator");
@@ -50,6 +49,8 @@ const BMIInsert = () => {
     return (
         <div className="homepage">
             <Nav />
+            <h1></h1>
+            <br/>
             <h1>
                 Welcome 
                 Please input your information

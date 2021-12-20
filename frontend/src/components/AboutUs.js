@@ -1,10 +1,10 @@
 import React from "react";
-import "../styles/aboutus.css";
+import "../styles/global.css";
 import axios from "axios";
 import { useHistory } from "react-router-dom";
 
-import Nav from "./Nav";
-import Footer from "./Footer";
+import Nav from "./nav";
+import Footer from "./footer";
 
 function AboutUs() {
   return (

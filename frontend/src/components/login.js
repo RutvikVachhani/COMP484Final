@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from "react"
-import "../styles/login.css"
+import "../styles/global.css";
 import axios from "axios"
 import { useHistory } from "react-router-dom"
 import { getInfo } from "../api"

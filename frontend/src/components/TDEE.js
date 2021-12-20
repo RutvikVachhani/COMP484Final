@@ -1,7 +1,8 @@
 import React,{useState, useEffect} from "react";
 import { useHistory } from "react-router-dom"
 import { getInfo } from "../api";
-import Nav from "./Nav";
+import "../styles/global.css";
+import Nav from "./nav";
 import Footer from "./footer";
 const fitnessCalculatorFunctions = require("fitness-calculator");
 
@@ -30,6 +31,8 @@ const TDEE = () => {
     return(
         <div>
             <Nav/>
+            <h1></h1>
+            <br/>
             <u><h1>TDEE(Total daily energy expenditure): {TDEE} </h1></u>
             <h2>Goal: {info.goal}</h2>
             <h2>Gender: {info.gender}</h2>

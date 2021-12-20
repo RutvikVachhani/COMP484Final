@@ -1,5 +1,5 @@
 import React, { useState } from "react"
-import "../styles/register.css"
+import "../styles/global.css";
 import axios from "axios"
 import { useHistory } from "react-router-dom"
 
