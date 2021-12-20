@@ -1,3 +1,11 @@
+learning react: https://reactjs.org/docs/getting-started.html
+learning nodejs: https://www.w3schools.com/nodejs/
+learning mongoDB with nodejs: https://www.w3schools.com/nodejs/nodejs_mongodb_create_db.asp
+
+learning MERN stack together: 
+https://www.youtube.com/watch?v=SyEQLbbSTWg
+
+links to dietplans / workout used:
 https://www.healthline.com/nutrition/how-to-lose-weight-as-fast-as-possible#tips
 
 https://www.healthline.com/nutrition/how-to-gain-weight#TOC_TITLE_HDR_6

@@ -4,6 +4,7 @@ const User = require('../models/User');
 
 var globalUsername = "";
 
+//login authentication
 router.post('/auth', (req, res) => {
     const { username, password } = req.body;
     User.findOne({username: username}, (err, user) => {
@@ -31,7 +32,6 @@ router.post('/registerInput', function(req, res, next) {
     if(user){
         user.save()
         .then(
-            //res.redirect('/signIn')
             res.json({
                 message: "added"
             })

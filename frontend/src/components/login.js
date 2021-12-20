@@ -36,10 +36,12 @@ const Login = ({ setLoginUser }) => {
     axios.post("http://localhost:4000/auth", user).then((res) => {
       alert(res.data.message);
       setLoginUser(res.data.user);
-      if (info.username == user.username) {
-        history.push("/", user);
+      if(info.username){
+        if (info.username == user.username) {
+          history.push("/", user);
+        } 
       } else {
-        history.push("/bmiInsert");
+          history.push("/bmiInsert");
       }
     });
   };
