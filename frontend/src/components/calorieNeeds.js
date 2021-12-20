@@ -2,8 +2,9 @@ import React, { useState, useEffect } from "react";
 import { useHistory } from "react-router-dom";
 import { getInfo } from "../api";
 import "../styles/global.css";
-import Nav from "./nav";
 import food from "../assets/food.jpg";
+import { Link } from "react-router-dom";
+import Nav from "./nav";
 import Footer from "./footer";
 const fitnessCalculatorFunctions = require("fitness-calculator");
 
@@ -39,6 +40,7 @@ const CalorieNeeds = () => {
     <div>
       <Nav />
       <div id="mySidenav" className="sidenav">
+      <Link to="/homepage">Home</Link> 
         <h2>Amount of Calories Needed</h2>
         <br/>
         <p>This amount is calculated depending on your activity and goal</p>
@@ -158,7 +160,7 @@ const CalorieNeeds = () => {
         <h2>Weight: {info.weight}</h2>
         <h2>Activity Level: {info.activity}</h2>
       </div>
-      <img src={food} alt="food" width="656" height="748"></img>
+      <img src={food} alt="food" width="700" height="748"></img>
       <Footer />
     </div>
   );

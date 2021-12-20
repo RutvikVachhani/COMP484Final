@@ -8,7 +8,7 @@ export default function Nav() {
       <div>
         <nav>
           <div className="left">
-            <h2>Get Healthier Today</h2>
+            <h2>Fitness calculator</h2>
           </div>
           <div>
             <h2>

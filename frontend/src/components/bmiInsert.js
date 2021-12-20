@@ -49,7 +49,9 @@ const BMIInsert = () => {
     <div className="homepage">
       <Nav />
       <h1 className="center">Welcome Please input your information</h1>
+      <div id="mySidenav" className="sidenav">
       <Link to="/homepage">Home</Link>
+      </div>
       <div>
         <form name="bmi" onSubmit={InsertBMI}>
           <label>Gender</label>

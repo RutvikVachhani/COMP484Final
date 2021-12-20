@@ -62,7 +62,7 @@ img{
 https://stackoverflow.com/questions/17275707/how-do-i-evenly-add-space-between-a-label-and-the-input-field-regardless-of-leng
 */
 form {
-    padding-left: 2%;
+    padding-left: 15%;
 }
 
 label {
@@ -77,6 +77,15 @@ input {
     flex: 0 0 200px;
     margin-left: 10px;
 }
+/*-----------Display BMI---------*/
+iframe{
+    margin-top: 0%;
+    margin-left: 35%
+
+}
+
+
+
 /*----------about us------------*/
 .center {
   height: 50px;
@@ -94,7 +103,8 @@ input {
   max-width: 80%;
   margin: 0 auto;
   overflow: hidden;
-  padding: 20px;
+  padding: 25px;
+  padding-left: 5%;
 }
 /*------------Nav-------------*/
 .topBanner {
@@ -124,13 +134,16 @@ footer {
 .content-wrap {
   float: left;
   max-width: 950px;
-  padding: 85px;
+  padding-left: 15%;
+  padding-top: 1.75%;
+  line-height: 1.6;
 }
+
 .column-wide {
   padding-top: 100px;
-  width: 35%;
+  width: 25%;
   float: right;
-  padding-right: 30px;
+  padding-right: 5%;
 }
 
 /*-----------login------------*/
@@ -253,5 +266,5 @@ https://www.w3schools.com/howto/howto_js_sidenav.asp
 /*
 Sources
 https://cdn.horizonfitness.rocks/catalog/product/t/1/t101-mop3-r.jpg
-
+https://create-react-app.dev/docs/adding-images-fonts-and-files/
 */

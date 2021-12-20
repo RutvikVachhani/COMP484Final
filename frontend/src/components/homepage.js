@@ -3,7 +3,7 @@ import "../styles/global.css";
 import axios from "axios";
 import { useHistory } from "react-router-dom";
 import { Link } from "react-router-dom";
-
+import logo from "../assets/healthy-people-logo-vector-19182580.jpg";
 import Login from "./login";
 
 import Nav from "./nav";
@@ -48,10 +48,10 @@ const Homepage = ({ setLoginUser }) => {
         <h3>Total daily energy expenditure</h3>
         <Link to="/TDEE">TDEE</Link>
         <br />
-        <h3>Diet-Plans</h3>
-        <Link to="dietPlans">Diet Plan</Link>
-        <br />
       </div>
+      <div>
+          <img src={logo} width="650"></img>
+        </div>
       <Footer />
     </div>
   );
