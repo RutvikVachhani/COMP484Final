@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import "../styles/global.css";
 import axios from "axios";
 import { useHistory } from "react-router-dom";
+import logo from "../assets/healthy-people-logo-vector-19182580.jpg";
+
 
 const Register = () => {
   const history = useHistory();
@@ -36,8 +38,11 @@ const Register = () => {
   return (
     <div className="App">
       <div className="register">
-        {console.log("User", user)}
-        <h1>Register</h1>
+      <h1>Get Healthier</h1>
+        <h2>Register</h2>
+        <div>
+          <img src={logo} width="100" style={{float:"left"}}/>
+        </div>
         <input
           type="text"
           name="name"
@@ -76,7 +81,7 @@ const Register = () => {
         <div className="button" onClick={register}>
           Register
         </div>
-        <div>or</div>
+        <br/><br/>
         <div className="button" onClick={() => history.push("/login")}>
           Login
         </div>

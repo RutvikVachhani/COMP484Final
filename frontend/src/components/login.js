@@ -3,6 +3,7 @@ import "../styles/global.css";
 import axios from "axios";
 import { useHistory } from "react-router-dom";
 import { getInfo } from "../api";
+import logo from "../assets/healthy-people-logo-vector-19182580.jpg";
 
 const Login = ({ setLoginUser }) => {
   const history = useHistory();
@@ -34,22 +35,23 @@ const Login = ({ setLoginUser }) => {
 
   const login = () => {
     axios.post("http://localhost:4000/auth", user).then((res) => {
-      alert(res.data.message);
       setLoginUser(res.data.user);
-      if(info.username){
         if (info.username == user.username) {
           history.push("/", user);
-        } 
-      } else {
+        } else {
           history.push("/bmiInsert");
-      }
+        }
     });
   };
 
   return (
     <div className="App">
       <div className="login">
-        <h1>Login</h1>
+        <h1>Get Healthier</h1>
+        <h2>Login</h2>
+        <div>
+          <img src={logo} width="100" style={{float:"left"}}/>
+        </div>
         <input
           type="text"
           name="username"
@@ -66,8 +68,8 @@ const Login = ({ setLoginUser }) => {
         ></input>
         <div className="button" onClick={login}>
           Login
-        </div>
-        <div>or</div>
+        </div> <br/>
+        <br/><br/>
         <div className="button" onClick={() => history.push("/register")}>
           Register
         </div>

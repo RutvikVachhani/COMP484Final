@@ -50,7 +50,7 @@ const BodyWeight = () => {
       <Link to="/homepage">Home</Link>
         <h2>Ideal Body Weight Required Depending on Height</h2>
         <br/>
-        <h3>Ideal Body Weight: {Idealweight}</h3>
+        <h2>Ideal Body Weight: {Idealweight}</h2>
         <br/>
         <h2>
           <u>Your Info:</u>
@@ -138,11 +138,6 @@ const BodyWeight = () => {
       </div>
       <div className="column-wide">
         <br />
-        <u>
-          <h1>Ideal Body Weight: {Idealweight}</h1>
-        </u>
-        <h2>Gender: {info.gender}</h2>
-        <h2>Height: {info.height}</h2>
       </div>
       <Footer />
     </div>
