@@ -28,5 +28,8 @@ app.use(cors());
 //---------------------------------//
 app.use('/', AuthRoutes);
 
+app.get('/', (req,res) => {
+    res.send("hello")
+});
 //node server output
 app.listen(process.env.PORT || 4000);
