@@ -21,7 +21,7 @@ const Login = ({ setLoginUser }) => {
     }
 
     const login = () => {
-        axios.post("http://localhost:4000/auth", user)
+        axios.post("https://comp484finalbackend.herokuapp.com/auth", user)
         .then(res => {
             alert(res.data.message)
             setLoginUser(res.data.user)
