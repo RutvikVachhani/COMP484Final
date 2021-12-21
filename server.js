@@ -12,7 +12,8 @@ const HomeRoutes = require('./routes/home');
 
 //Database connection---------------------------//
 const mongoose = require('mongoose');
-mongoose.connect(process.env.DATABASE_ACCESS, {useNewUrlParser: true, useUnifiedTopology: true});
+const url = "mongodb+srv://hrithik0073:Qwerty123@cluster0.vqkx8.mongodb.net/COMP484?retryWrites=true&w=majority";
+mongoose.connect(url, {useNewUrlParser: true, useUnifiedTopology: true});
 const db = mongoose.connection;
 
 db.on('error', (err) => {
