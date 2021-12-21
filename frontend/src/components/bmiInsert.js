@@ -4,7 +4,7 @@ import axios from "axios"
 import { useHistory } from "react-router-dom"
 
 import Nav from "./Nav";
-import Footer from "./Footer";
+import Footer from "./footer";
 
 const BMIInsert = () => {
 
