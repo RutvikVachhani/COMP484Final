@@ -41,7 +41,7 @@ const BMIInsert = () => {
     var BMI = fitnessCalculatorFunctions.BMI(h, w);
     console.log(h + " " + w);
     document.getElementById("bmi").innerHTML = `Your BMI is ${BMI}`;
-    axios.post("http://localhost:4000/bmiInput", info).then((res) => {
+    axios.post("https://comp484finalbackend.herokuapp.com/bmiInput", info).then((res) => {
       alert(res.data.message);
       //history.push("/displayBMI")
     });
