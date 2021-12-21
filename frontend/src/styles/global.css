@@ -77,6 +77,14 @@ input {
     flex: 0 0 200px;
     margin-left: 10px;
 }
+
+.content-BMI {
+    float: left;
+    max-width: 950px;
+    padding-left: 0%;
+    padding-top: 2%;
+    line-height: 1.6;
+  }
 /*-----------Display BMI---------*/
 iframe{
     margin-top: 0%;
@@ -106,6 +114,10 @@ iframe{
   padding: 25px;
   padding-left: 5%;
 }
+table{
+    padding-top: 5%;
+    padding-left: 20%;
+}
 /*------------Nav-------------*/
 .topBanner {
   display: flex;
@@ -130,7 +142,13 @@ footer {
   /*Specifies the line height.*/
   min-width: 40px;
 }
-
+footer a{
+    color: white;
+    padding-left: 3%;
+}
+/*--------------text styling-----------
+https://www.w3schools.com/cssref/tryit.asp?filename=trycss_line-height
+*/
 .content-wrap {
   float: left;
   max-width: 950px;
@@ -141,9 +159,10 @@ footer {
 
 .column-wide {
   padding-top: 100px;
-  width: 25%;
+  width: 35%;
   float: right;
-  padding-right: 5%;
+  padding-right: 10%;
+  line-height: 1.6;
 }
 
 /*-----------login------------*/

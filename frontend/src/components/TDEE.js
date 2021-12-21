@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 import { useHistory } from "react-router-dom";
 import { getInfo } from "../api";
 import "../styles/global.css";
-import treadmill from "../assets/treadmill.jpg";
+//import treadmill from "../assets/treadmill.jpg";
 import { Link } from "react-router-dom";
 import Nav from "./nav";
 import Footer from "./footer";
@@ -53,7 +53,17 @@ const TDEE = () => {
         <h3>Weight: {info.weight}</h3>
         <h3>Activity Level: {info.activity}</h3>
       </div>
-      <img src={treadmill} alt="food" width="800" height="748"></img>
+      <div className="content-wrap">
+      <embed
+          id="tdee"
+          width="700"
+          height="394"
+          src="https://www.youtube.com/embed/Um6wKFfHC-0"
+          frameborder="0"
+          allowfullscreen
+          style={{ display: "block" }}
+        ></embed>
+        </div>
       <Footer />
     </div>
   );

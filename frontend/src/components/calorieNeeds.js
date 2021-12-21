@@ -52,12 +52,20 @@ const CalorieNeeds = () => {
         <br/>
         <p>This amount is calculated depending on your activity and goal</p>
         <br />
-        <u>
+        <h2 className="center">Goal: let's get you in shape.</h2>
+        <br/>
+        <h2>Gender: {info.gender}</h2>
+        <h2>Age: {info.age}</h2>
+        <h2>Height: {info.height}</h2>
+        <h2>Weight: {info.weight}</h2>
+        <h2>Activity Level: {info.activity}</h2>
+        </div>
+        <div className="content-wrap">
           {(() => {
             if (goal == "mildWeightGain") {
               return (
                 <div>
-                  <h2>Calorie Needs: {calories.mildWeightGain} cal</h2>
+                  <h2><u>Calorie Needs: {calories.mildWeightGain} cal</u></h2>
                   <ol>
                     <li>Homemade protein smoothies.</li>
                     <li>Milk</li>
@@ -73,7 +81,7 @@ const CalorieNeeds = () => {
             } else if (goal == "balance") {
               return (
                 <div>
-                  <h2>Calorie Needs: {calories.balance} cal</h2>
+                  <h2><u>Calorie Needs: {calories.balance} cal</u></h2>
                   <p>As your goal is set to balanced below is your diet plan</p>
                   <ol>
                     <li>
@@ -106,7 +114,7 @@ const CalorieNeeds = () => {
             } else if (goal == "mildWeightLoss") {
               return (
                 <div>
-                  <h2>Calorie Needs: {calories.mildWeightLoss} cal</h2>
+                  <h2><u>Calorie Needs: {calories.mildWeightLoss} cal</u></h2>
                   <ol>
                     <li>Cut back on refined carbs</li>
                     <li>
@@ -123,7 +131,7 @@ const CalorieNeeds = () => {
             } else if (goal == "heavyWeightLoss") {
               return (
                 <div>
-                  <h2>Calorie Needs: {calories.heavyWeightLoss} cal</h2>
+                  <h2><u>Calorie Needs: {calories.heavyWeightLoss} cal</u></h2>
                   <ol>
                     <li>Cut back on refined carbs</li>
                     <li>
@@ -140,7 +148,7 @@ const CalorieNeeds = () => {
             } else if (goal == "heavyWeightGain") {
               return (
                 <div>
-                  <h2>Calorie Needs: {calories.heavyWeightGain} cal</h2>
+                  <h2><u>Calorie Needs: {calories.heavyWeightGain} cal</u></h2>
                   <ol>
                     <li>Homemade protein smoothies.</li>
                     <li>Milk</li>
@@ -157,17 +165,9 @@ const CalorieNeeds = () => {
               return <div>Goal not choosen</div>;
             }
           })()}
-        </u>
+          </div>
         <br />
-        <h2 className="center">Goal: let's get you in shape.</h2>
-        <br/>
-        <h2>Gender: {info.gender}</h2>
-        <h2>Age: {info.age}</h2>
-        <h2>Height: {info.height}</h2>
-        <h2>Weight: {info.weight}</h2>
-        <h2>Activity Level: {info.activity}</h2>
-      </div>
-      <img src={food} alt="food" width="700" height="748"></img>
+      <img src={food} alt="food" width="700"></img>
       <Footer />
     </div>
   );

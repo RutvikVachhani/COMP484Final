@@ -37,7 +37,7 @@ const Login = ({ setLoginUser }) => {
   const login = () => {
     axios.post("http://localhost:4000/auth", user).then((res) => {
       setLoginUser(res.data.user);
-        if (info.username == user.username) {
+        if (info) {
           history.push("/", user);
         } else {
           history.push("/bmiInsert");

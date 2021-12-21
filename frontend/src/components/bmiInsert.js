@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import "../styles/global.css";
 import axios from "axios";
 import { useHistory } from "react-router-dom";
-
+import scale from "../assets/scale.jpg";
 import Nav from "./nav";
 import Footer from "./footer";
 
@@ -55,7 +55,7 @@ const BMIInsert = () => {
       <div id="mySidenav" className="sidenav">
       <Link to="/homepage">Home</Link>
       </div>
-      <div>
+      <div className="content-wrap">
         <form name="bmi" onSubmit={InsertBMI}>
           <label>Gender</label>
           <select
@@ -146,10 +146,12 @@ const BMIInsert = () => {
             Submit
           </button>
         </form>
-       
         <p id="bmi"></p>
-      </div>
-     
+        </div>
+        <div className="content-BMI">
+        <img src={scale} alt="food" width="700"></img>
+        </div>
+
       <Footer />
     </div>
   );

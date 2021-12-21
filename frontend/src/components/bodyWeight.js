@@ -53,11 +53,11 @@ const BodyWeight = () => {
     <div>
       <Nav />
       <div id="mySidenav" className="sidenav">
-      <Link to="/homepage">Home</Link>
+        <Link to="/homepage">Home</Link>
         <h2>Ideal Body Weight Required Depending on Height</h2>
-        <br/>
+        <br />
         <h2>Ideal Body Weight: {Idealweight}</h2>
-        <br/>
+        <br />
         <h2>
           <u>Your Info:</u>
         </h2>
@@ -79,45 +79,46 @@ const BodyWeight = () => {
           allowfullscreen
           style={{ display: "none" }}
         ></embed>
-        <div className="column-wide">
-          <ol id="gainList" style={{ display: "none" }}>
-            <li>
-              Don’t drink water before meals. This can fill your stomach and
-              make it harder to get in enough calories.
-            </li>
-            <li>
-              Eat more often. Squeeze in an additional meal or snack whenever
-              you can, such as before bed.
-            </li>
-            <li>
-              Drink milk. Drinking whole milk to quench thirst is a simple way
-              to get in more high-quality protein and calories.
-            </li>
-            <li>
-              Try weight gainer shakes. If you’re really struggling then you can
-              try weight gainer shakes. These are very high in protein, carbs
-              and calories.
-            </li>
-            <li>
-              Use bigger plates. Definitely use large plates if you’re trying to
-              get in more calories, as smaller plates cause people to
-              automatically eat less.
-            </li>
-            <li>
-              Add cream to your coffee. This is a simple way to add in more
-              calories.
-            </li>
-            <li>
-              Get quality sleep. Sleeping properly is very important for muscle
-              growth.
-            </li>
-            <li>
-              Don’t smoke. Smokers tend to weigh less than non-smokers, and
-              quitting smoking often leads to weight gain.
-            </li>
-          </ol>
-        </div>
       </div>
+      <div className="column-wide">
+        <ol id="gainList" style={{ display: "none" }}>
+          <li>
+            Don’t drink water before meals. This can fill your stomach and make
+            it harder to get in enough calories.
+          </li>
+          <li>
+            Eat more often. Squeeze in an additional meal or snack whenever you
+            can, such as before bed.
+          </li>
+          <li>
+            Drink milk. Drinking whole milk to quench thirst is a simple way to
+            get in more high-quality protein and calories.
+          </li>
+          <li>
+            Try weight gainer shakes. If you’re really struggling then you can
+            try weight gainer shakes. These are very high in protein, carbs and
+            calories.
+          </li>
+          <li>
+            Use bigger plates. Definitely use large plates if you’re trying to
+            get in more calories, as smaller plates cause people to
+            automatically eat less.
+          </li>
+          <li>
+            Add cream to your coffee. This is a simple way to add in more
+            calories.
+          </li>
+          <li>
+            Get quality sleep. Sleeping properly is very important for muscle
+            growth.
+          </li>
+          <li>
+            Don’t smoke. Smokers tend to weigh less than non-smokers, and
+            quitting smoking often leads to weight gain.
+          </li>
+        </ol>
+      </div>
+
       <div className="content-wrap">
         <embed
           id="lose"

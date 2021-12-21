@@ -3,7 +3,7 @@ import React from "react";
 import "../styles/global.css";
 import axios from "axios";
 import { useHistory } from "react-router-dom";
-
+import { Link } from "react-router-dom";
 import Nav from "./nav";
 import Footer from "./footer";
 
@@ -12,11 +12,16 @@ function AboutUs() {
   return (
     <div>
       <Nav />
+      <div id="mySidenav" className="sidenav">
+      <Link to="/homepage">Home</Link>
+      </div>
       <div className="contentwrap">
         <div className="center">
           <h1> About Us </h1> <h2>Team EFC</h2>
           <p>
-            Four Computer Science seniors at CSUN
+            Four Computer Science seniors at CSUN have joined forces to get in
+            better shape during the current season of online classes due to
+            COVID-19 lockdowns.
           </p>
         </div>
         <table>
